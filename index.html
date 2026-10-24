@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Varix Observador · Política de privacidad</title>
+<style>
+  :root { --tinta: #1d2433; --suave: #5b6475; --linea: #d9dde5; --fondo: #f7f8fa; --acento: #0f6e78; }
+  @media (prefers-color-scheme: dark) { :root { --tinta: #e6eaf0; --suave: #9aa5b4; --linea: #2c3440; --fondo: #12161c; --acento: #4fb3bd; } }
+  body { margin: 0; background: var(--fondo); color: var(--tinta); font: 16px/1.6 -apple-system, "Helvetica Neue", Arial, sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 40px 16px 64px; }
+  h1 { font-size: 28px; margin: 0 0 4px; } h2 { font-size: 19px; margin: 28px 0 8px; }
+  .sub { color: var(--suave); margin: 0 0 24px; }
+  table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  th, td { text-align: left; padding: 8px; border-top: 1px solid var(--linea); vertical-align: top; }
+  a { color: var(--acento); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Varix Observador · Política de privacidad</h1>
+  <p class="sub">Clínica Varix (Doctor González Folch SpA) · vigente desde el 24 de octubre de 2026</p>
+
+  <p>Varix Observador es una extensión de uso interno de Clínica Varix. Se instala solo en computadores de la clínica, con el conocimiento del personal, para estudiar cómo se usa el sistema Medilink y diseñar con esa información la plataforma propia de la clínica. No está destinada al público general.</p>
+
+  <h2>Qué registra</h2>
+  <p>Solo funciona en <b>varix.app.softwaremedilink.com</b>. Ahí registra la estructura de la interfaz y cómo se recorre:</p>
+  <ul>
+    <li>la pantalla en que se está, con la dirección sin números ni identificadores (por ejemplo, <code>/pacientes/:id/ficha</code>);</li>
+    <li>los rótulos de botones, pestañas, menús, encabezados de columna y campos;</li>
+    <li>qué botón se usó y a qué pantalla llevó, y cuánto tiempo se pasó en cada pantalla;</li>
+    <li>el nombre del computador, su ubicación y su área (por ejemplo, recepción), configurados por TI.</li>
+  </ul>
+
+  <h2>Qué no registra nunca</h2>
+  <ul>
+    <li>Datos de pacientes: nombres, RUT, teléfonos, correos, fechas, diagnósticos ni montos.</li>
+    <li>Lo que se escribe en los campos ni el contenido de tablas y listas.</li>
+    <li>Quién está usando el computador.</li>
+    <li>Capturas de pantalla.</li>
+    <li>Nada de otros sitios web.</li>
+  </ul>
+  <p>Los textos se filtran tres veces (en el navegador, en el computador y en el servidor de TI) con patrones que descartan RUT, correos, números, fechas, horas y montos.</p>
+
+  <h2>Cómo se guarda y a dónde va</h2>
+  <table>
+    <tr><th>Dónde</th><th>Cómo</th></tr>
+    <tr><td>En el computador</td><td>Cifrado (AES-GCM). La clave queda en el llavero de macOS o protegida por Windows (DPAPI).</td></tr>
+    <tr><td>Envío</td><td>Una vez al día, cifrado de extremo a extremo (X25519 + AES-256-GCM) hacia el buzón de TI de la clínica. El proveedor del correo solo transporta datos cifrados.</td></tr>
+    <tr><td>Destino</td><td>Un computador del área de TI de Clínica Varix, en una base de datos local con respaldo diario y acceso con usuario y contraseña.</td></tr>
+  </table>
+
+  <h2>Con quién se comparte</h2>
+  <p>Con nadie fuera de Clínica Varix. No se vende, no se usa para publicidad ni para evaluar a personas, y solo se usa para el propósito descrito arriba.</p>
+
+  <h2>Cuánto tiempo se conserva</h2>
+  <p>El estudio dura cuatro semanas; al terminar, la extensión se desinstala de todos los computadores. En cada computador, lo anotado se borra apenas llega a TI, o como máximo a los 14 días. En el servidor de TI se conserva solo mientras se usa para diseñar la plataforma Varix.</p>
+
+  <h2>Control del personal</h2>
+  <p>El ícono de la extensión muestra que está activa. Un clic la pausa (aparece <b>II</b>) y otro la reanuda; en pausa no registra nada.</p>
+
+  <h2>Contacto</h2>
+  <p>Área de TI de Clínica Varix · <a href="mailto:itvarix0@gmail.com">itvarix0@gmail.com</a>. Las solicitudes sobre datos personales se atienden según la Ley 19.628 y la Ley 21.719 de Chile.</p>
+</main>
+</body>
+</html>
